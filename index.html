@@ -1,23 +1,39 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Concrete Slab Calculator – Calculate Concrete Needed</title>
-  <meta
-    name="description"
-    content="Use our Concrete Slab Calculator to estimate cubic feet, cubic yards, concrete bags, waste allowance, and material cost for your slab project."
-  />
+  <title>Concrete Slab Calculator | Calculate Concrete Needed</title>
+
+<meta
+ name="description"
+ content="Use this free concrete slab calculator to calculate concrete volume in cubic feet and cubic yards, estimate concrete bags, add waste allowance, and estimate material cost."
+/>
+
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+
+  <link
+    rel="canonical"
+    href="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/"
+  />
+
+  <!-- Open Graph -->
 
   <meta property="og:title" content="Concrete Slab Calculator" />
   <meta
     property="og:description"
-    content="Calculate how much concrete you need for a slab, patio, driveway, garage floor, or concrete pad."
+    content="Calculate how much concrete you need for a slab, patio, driveway, garage floor, shed base, or concrete pad."
+  />
+  <meta
+    property="og:url"
+    content="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/"
   />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SlabCalc" />
+
+  <!-- Fonts -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,762 +48,832 @@
 <body>
 
   <!-- HEADER -->
+
   <header class="site-header">
     <div class="container nav">
-      <a href="#top" class="logo">
+      <a href="#top" class="logo" aria-label="SlabCalc home">
         <span class="logo-mark">CS</span>
         <span>SlabCalc</span>
       </a>
 
-      <nav class="desktop-nav">
-        <a href="#calculator">Calculator</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#examples">Examples</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+```
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="#calculator">Calculator</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#examples">Examples</a>
+    <a href="#faq">FAQ</a>
+  </nav>
 
-      <a href="#calculator" class="nav-btn">Calculate Now</a>
-    </div>
+  <a href="#calculator" class="nav-btn">Calculate Now</a>
+</div>
+```
+
   </header>
-
 
   <main id="top">
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
+```
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
 
-        <div class="hero-content">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            Free & Easy to Use
-          </div>
-
-          <h1>
-            Concrete Slab
-            <span>Calculator</span>
-          </h1>
-
-          <p class="hero-text">
-            Calculate how much concrete you need for your slab, patio,
-            driveway, garage floor, or concrete pad.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#calculator" class="primary-btn">
-              Calculate Concrete
-              <span>→</span>
-            </a>
-
-            <a href="#how-it-works" class="text-btn">
-              How it works
-            </a>
-          </div>
-
-          <div class="trust-row">
-            <div>
-              <strong>Fast</strong>
-              <span>Instant results</span>
-            </div>
-            <div>
-              <strong>USA</strong>
-              <span>Cubic yard output</span>
-            </div>
-            <div>
-              <strong>Free</strong>
-              <span>No signup required</span>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- HERO MINI CALCULATOR -->
-        <div class="hero-card">
-          <div class="hero-card-top">
-            <div>
-              <span class="small-label">QUICK ESTIMATE</span>
-              <h2>How much concrete?</h2>
-            </div>
-            <div class="calculator-icon">▦</div>
-          </div>
-
-          <div class="mini-line">
-            <span>Length</span>
-            <strong>20 ft</strong>
-          </div>
-
-          <div class="mini-line">
-            <span>Width</span>
-            <strong>10 ft</strong>
-          </div>
-
-          <div class="mini-line">
-            <span>Thickness</span>
-            <strong>4 in</strong>
-          </div>
-
-          <div class="mini-result">
-            <span>Example result</span>
-            <strong>2.47 yd³</strong>
-          </div>
-        </div>
-
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Free & Easy to Use
       </div>
-    </section>
 
-
-    <!-- CALCULATOR -->
-    <section class="calculator-section" id="calculator">
-      <div class="container">
-
-        <div class="section-heading centered">
-          <span class="section-tag">CONCRETE CALCULATOR</span>
-          <h2>Calculate your concrete needs</h2>
-          <p>
-            Enter your slab dimensions below. We'll calculate the concrete
-            volume and recommended amount with your selected waste allowance.
-          </p>
-        </div>
-
-
-        <div class="calculator-layout">
-
-          <!-- INPUT CARD -->
-          <div class="calculator-card">
-
-            <div class="card-heading">
-              <div>
-                <span class="step-label">STEP 01</span>
-                <h3>Enter your dimensions</h3>
-              </div>
-              <span class="required-note">* Required</span>
-            </div>
-
-
-            <!-- LENGTH -->
-            <div class="input-group">
-              <label for="length">Length</label>
-
-              <div class="input-with-unit">
-                <input
-                  type="number"
-                  id="length"
-                  min="0"
-                  step="any"
-                  placeholder="20"
-                />
-
-                <select id="lengthUnit">
-                  <option value="ft">Feet</option>
-                  <option value="in">Inches</option>
-                </select>
-              </div>
-
-              <small class="error-message" id="lengthError"></small>
-            </div>
-
-
-            <!-- WIDTH -->
-            <div class="input-group">
-              <label for="width">Width</label>
-
-              <div class="input-with-unit">
-                <input
-                  type="number"
-                  id="width"
-                  min="0"
-                  step="any"
-                  placeholder="10"
-                />
-
-                <select id="widthUnit">
-                  <option value="ft">Feet</option>
-                  <option value="in">Inches</option>
-                </select>
-              </div>
-
-              <small class="error-message" id="widthError"></small>
-            </div>
-
-
-            <!-- THICKNESS -->
-            <div class="input-group">
-              <label for="thickness">Thickness</label>
-
-              <div class="input-with-unit">
-                <input
-                  type="number"
-                  id="thickness"
-                  min="0"
-                  step="any"
-                  placeholder="4"
-                />
-
-                <select id="thicknessUnit">
-                  <option value="in">Inches</option>
-                  <option value="ft">Feet</option>
-                </select>
-              </div>
-
-              <small class="input-help">
-                Typical slab measurements are often entered in inches.
-              </small>
-
-              <small class="error-message" id="thicknessError"></small>
-            </div>
-
-
-            <!-- WASTE -->
-            <div class="input-group">
-              <label>Waste allowance</label>
-
-              <div class="waste-options">
-                <button type="button" class="waste-btn" data-waste="0">0%</button>
-                <button type="button" class="waste-btn" data-waste="5">5%</button>
-                <button type="button" class="waste-btn active" data-waste="10">10%</button>
-                <button type="button" class="waste-btn" data-waste="15">15%</button>
-              </div>
-
-              <input type="hidden" id="waste" value="10" />
-            </div>
-
-
-            <!-- OPTIONAL COST -->
-            <div class="optional-divider">
-              <span>OPTIONAL</span>
-            </div>
-
-            <div class="input-group">
-              <label for="price">
-                Concrete price
-                <span class="optional-label">per cubic yard</span>
-              </label>
-
-              <div class="currency-input">
-                <span>$</span>
-                <input
-                  type="number"
-                  id="price"
-                  min="0"
-                  step="any"
-                  placeholder="150"
-                />
-              </div>
-            </div>
-
-
-            <div class="calculator-buttons">
-              <button class="calculate-btn" id="calculateBtn">
-                Calculate Concrete
-                <span>→</span>
-              </button>
-
-              <button class="reset-btn" id="resetBtn" type="button">
-                Reset
-              </button>
-            </div>
-
-          </div>
-
-
-          <!-- RESULTS CARD -->
-          <div class="results-card" id="resultsCard">
-
-            <div class="results-header">
-              <div>
-                <span class="step-label">YOUR RESULT</span>
-                <h3>Concrete needed</h3>
-              </div>
-
-              <div class="result-check">✓</div>
-            </div>
-
-
-            <div class="main-result">
-              <span>Recommended order</span>
-              <div>
-                <strong id="recommendedYards">—</strong>
-                <small>yd³</small>
-              </div>
-              <p>Including your selected waste allowance</p>
-            </div>
-
-
-            <div class="result-grid">
-
-              <div class="result-item">
-                <span>Base volume</span>
-                <strong id="cubicFeet">—</strong>
-                <small>cubic feet</small>
-              </div>
-
-              <div class="result-item">
-                <span>Base volume</span>
-                <strong id="baseYards">—</strong>
-                <small>cubic yards</small>
-              </div>
-
-              <div class="result-item">
-                <span>Waste</span>
-                <strong id="wasteResult">—</strong>
-                <small>allowance</small>
-              </div>
-
-              <div class="result-item">
-                <span>Estimated cost</span>
-                <strong id="estimatedCost">—</strong>
-                <small id="costLabel">enter price above</small>
-              </div>
-
-            </div>
-
-
-            <!-- BAG ESTIMATE -->
-            <div class="bag-section">
-              <div class="bag-heading">
-                <div>
-                  <strong>Concrete bag estimate</strong>
-                  <span>Approximate quantity</span>
-                </div>
-
-                <select id="bagSize">
-                  <option value="40">40 lb</option>
-                  <option value="60">60 lb</option>
-                  <option value="80" selected>80 lb</option>
-                </select>
-              </div>
-
-              <div class="bag-result">
-                <strong id="bagCount">—</strong>
-                <span>bags</span>
-              </div>
-
-              <p>
-                Bag estimates vary by manufacturer and product yield.
-                Always check the bag label before purchasing.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- HOW IT WORKS -->
-    <section class="info-section" id="how-it-works">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-tag">HOW IT WORKS</span>
-          <h2>Concrete calculation made simple.</h2>
-          <p>
-            You only need three measurements to calculate the basic volume
-            of a rectangular concrete slab.
-          </p>
-        </div>
-
-
-        <div class="steps-grid">
-
-          <article class="step-card">
-            <span class="step-number">01</span>
-            <h3>Enter dimensions</h3>
-            <p>
-              Enter your slab's length, width, and thickness using the units
-              you know.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <span class="step-number">02</span>
-            <h3>Add waste</h3>
-            <p>
-              Choose a waste allowance to account for measurement differences
-              and material waste.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <span class="step-number">03</span>
-            <h3>Get your result</h3>
-            <p>
-              The calculator converts your measurements into cubic feet and
-              cubic yards.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <span class="step-number">04</span>
-            <h3>Estimate materials</h3>
-            <p>
-              Optionally estimate concrete bags and material cost using your
-              own price.
-            </p>
-          </article>
-
-        </div>
-
-
-        <!-- FORMULA -->
-        <div class="formula-card">
-
-          <div class="formula-content">
-            <span class="section-tag">THE FORMULA</span>
-            <h3>How do we calculate concrete?</h3>
-
-            <p>
-              First, all measurements are converted to feet. The length,
-              width, and thickness are then multiplied to find the volume
-              in cubic feet.
-            </p>
-
-            <div class="formula-box">
-              <span>Cubic Feet</span>
-              <strong>Length × Width × Thickness</strong>
-            </div>
-
-            <div class="formula-box">
-              <span>Cubic Yards</span>
-              <strong>Cubic Feet ÷ 27</strong>
-            </div>
-          </div>
-
-          <div class="formula-visual">
-            <div class="slab-illustration">
-              <div class="slab-top"></div>
-              <div class="slab-side"></div>
-              <div class="dimension length-dimension">Length</div>
-              <div class="dimension width-dimension">Width</div>
-              <div class="dimension thickness-dimension">Thickness</div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- EXAMPLE -->
-    <section class="example-section" id="examples">
-      <div class="container">
-
-        <div class="section-heading centered">
-          <span class="section-tag">EXAMPLE</span>
-          <h2>Concrete slab calculation example</h2>
-          <p>
-            Here's a simple example to understand how the calculation works.
-          </p>
-        </div>
-
-
-        <div class="example-card">
-
-          <div class="example-inputs">
-
-            <div>
-              <span>Length</span>
-              <strong>20 ft</strong>
-            </div>
-
-            <div>
-              <span>Width</span>
-              <strong>10 ft</strong>
-            </div>
-
-            <div>
-              <span>Thickness</span>
-              <strong>4 in</strong>
-            </div>
-
-            <div>
-              <span>Waste</span>
-              <strong>10%</strong>
-            </div>
-
-          </div>
-
-
-          <div class="calculation-line">
-            <span>4 inches ÷ 12</span>
-            <strong>= 0.333 ft</strong>
-          </div>
-
-          <div class="calculation-line">
-            <span>20 × 10 × 0.333</span>
-            <strong>= 66.67 ft³</strong>
-          </div>
-
-          <div class="calculation-line">
-            <span>66.67 ÷ 27</span>
-            <strong>= 2.47 yd³</strong>
-          </div>
-
-          <div class="calculation-line final">
-            <span>With 10% waste</span>
-            <strong>≈ 2.72 yd³</strong>
-          </div>
-
-          <p class="example-note">
-            This is an example calculation. Your actual result depends on
-            the measurements you enter.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- PROJECT TYPES -->
-    <section class="projects-section">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-tag">COMMON PROJECTS</span>
-          <h2>What can you calculate?</h2>
-          <p>
-            The calculator can help estimate concrete volume for many
-            rectangular slab projects.
-          </p>
-        </div>
-
-
-        <div class="projects-grid">
-
-          <article class="project-card">
-            <div class="project-icon">▰</div>
-            <h3>Concrete Patio</h3>
-            <p>
-              Estimate concrete for a rectangular patio based on its
-              dimensions and thickness.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <div class="project-icon">▣</div>
-            <h3>Driveway</h3>
-            <p>
-              Calculate the approximate concrete volume required for a
-              driveway area.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <div class="project-icon">⌂</div>
-            <h3>Garage Floor</h3>
-            <p>
-              Estimate concrete volume for a rectangular garage floor slab.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <div class="project-icon">▤</div>
-            <h3>Shed Base</h3>
-            <p>
-              Calculate concrete requirements for a rectangular shed base
-              or foundation slab.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <div class="project-icon">＋</div>
-            <h3>Concrete Pad</h3>
-            <p>
-              Estimate concrete for equipment pads and other small
-              rectangular concrete areas.
-            </p>
-          </article>
-
-          <article class="project-card">
-            <div class="project-icon">═</div>
-            <h3>Walkway</h3>
-            <p>
-              Estimate concrete volume for a rectangular walkway section.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- FAQ -->
-    <section class="faq-section" id="faq">
-      <div class="container faq-container">
-
-        <div class="section-heading centered">
-          <span class="section-tag">FAQ</span>
-          <h2>Concrete slab calculator FAQs</h2>
-          <p>
-            Simple answers to common concrete calculation questions.
-          </p>
-        </div>
-
-
-        <div class="faq-list">
-
-          <details>
-            <summary>
-              How do I calculate how much concrete I need?
-              <span>+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Multiply the slab's length by its width and thickness to
-                calculate the volume. Make sure all three measurements use
-                the same unit. For U.S. concrete ordering, convert the
-                resulting cubic feet into cubic yards by dividing by 27.
-              </p>
-            </div>
-          </details>
-
-
-          <details>
-            <summary>
-              How do I convert cubic feet to cubic yards?
-              <span>+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Divide cubic feet by 27. One cubic yard contains 27 cubic
-                feet.
-              </p>
-            </div>
-          </details>
-
-
-          <details>
-            <summary>
-              Should I add extra concrete?
-              <span>+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Many people include an additional allowance because actual
-                measurements, uneven surfaces, spillage, and other factors
-                can affect the amount needed. The appropriate allowance
-                depends on the project.
-              </p>
-            </div>
-          </details>
-
-
-          <details>
-            <summary>
-              How thick should a concrete slab be?
-              <span>+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                There is no single thickness that is appropriate for every
-                project. Required thickness depends on the intended use,
-                loads, site conditions, reinforcement, local requirements,
-                and project specifications. Consult a qualified professional
-                when structural requirements matter.
-              </p>
-            </div>
-          </details>
-
-
-          <details>
-            <summary>
-              How many concrete bags do I need?
-              <span>+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Bag quantity depends on the bag size and the manufacturer's
-                stated yield. Our calculator provides an approximate estimate,
-                but always check the yield printed on the specific product
-                you plan to purchase.
-              </p>
-            </div>
-          </details>
-
-
-          <details>
-            <summary>
-              Does this calculator include labor?
-              <span>+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                No. The optional cost estimate is based only on the concrete
-                price per cubic yard that you enter. Labor, delivery, taxes,
-                equipment, and other project costs are not included.
-              </p>
-            </div>
-          </details>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- CTA -->
-    <section class="cta-section">
-      <div class="container cta-inner">
-        <div>
-          <span class="section-tag">READY TO CALCULATE?</span>
-          <h2>Find out how much concrete you need.</h2>
-        </div>
-
-        <a href="#calculator" class="primary-btn light">
-          Open Calculator
-          <span>↑</span>
+      <h1>
+        Concrete Slab
+        <span>Calculator</span>
+      </h1>
+
+      <p class="hero-text">
+        Calculate how much concrete you need for a slab, patio,
+        driveway, garage floor, shed base, walkway, or concrete pad.
+        Get cubic feet, cubic yards, bag estimates, waste allowance,
+        and optional material cost.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#calculator" class="primary-btn">
+          Calculate Concrete
+          <span>→</span>
+        </a>
+
+        <a href="#how-it-works" class="text-btn">
+          How it works
         </a>
       </div>
-    </section>
+
+      <div class="trust-row">
+        <div>
+          <strong>Fast</strong>
+          <span>Instant results</span>
+        </div>
+        <div>
+          <strong>USA</strong>
+          <span>Cubic yard output</span>
+        </div>
+        <div>
+          <strong>Free</strong>
+          <span>No signup required</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- HERO MINI CALCULATOR -->
+    <div class="hero-card">
+      <div class="hero-card-top">
+        <div>
+          <span class="small-label">QUICK ESTIMATE</span>
+          <h2>How much concrete?</h2>
+        </div>
+        <div class="calculator-icon">▦</div>
+      </div>
+
+      <div class="mini-line">
+        <span>Length</span>
+        <strong>20 ft</strong>
+      </div>
+
+      <div class="mini-line">
+        <span>Width</span>
+        <strong>10 ft</strong>
+      </div>
+
+      <div class="mini-line">
+        <span>Thickness</span>
+        <strong>4 in</strong>
+      </div>
+
+      <div class="mini-result">
+        <span>Example result</span>
+        <strong>2.47 yd³</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CALCULATOR -->
+<section class="calculator-section" id="calculator">
+  <div class="container">
+
+    <div class="section-heading centered">
+      <span class="section-tag">CONCRETE CALCULATOR</span>
+      <h2>Calculate your concrete needs</h2>
+      <p>
+        Enter your slab dimensions below to calculate concrete volume
+        in cubic feet and cubic yards, including your selected waste
+        allowance.
+      </p>
+    </div>
+
+
+    <div class="calculator-layout">
+
+      <!-- INPUT CARD -->
+      <div class="calculator-card">
+
+        <div class="card-heading">
+          <div>
+            <span class="step-label">STEP 01</span>
+            <h3>Enter your dimensions</h3>
+          </div>
+          <span class="required-note">* Required</span>
+        </div>
+
+
+        <!-- LENGTH -->
+        <div class="input-group">
+          <label for="length">Length</label>
+
+          <div class="input-with-unit">
+            <input
+              type="number"
+              id="length"
+              min="0"
+              step="any"
+              placeholder="20"
+            />
+
+            <select id="lengthUnit">
+              <option value="ft">Feet</option>
+              <option value="in">Inches</option>
+            </select>
+          </div>
+
+          <small class="error-message" id="lengthError"></small>
+        </div>
+
+
+        <!-- WIDTH -->
+        <div class="input-group">
+          <label for="width">Width</label>
+
+          <div class="input-with-unit">
+            <input
+              type="number"
+              id="width"
+              min="0"
+              step="any"
+              placeholder="10"
+            />
+
+            <select id="widthUnit">
+              <option value="ft">Feet</option>
+              <option value="in">Inches</option>
+            </select>
+          </div>
+
+          <small class="error-message" id="widthError"></small>
+        </div>
+
+
+        <!-- THICKNESS -->
+        <div class="input-group">
+          <label for="thickness">Thickness</label>
+
+          <div class="input-with-unit">
+            <input
+              type="number"
+              id="thickness"
+              min="0"
+              step="any"
+              placeholder="4"
+            />
+
+            <select id="thicknessUnit">
+              <option value="in">Inches</option>
+              <option value="ft">Feet</option>
+            </select>
+          </div>
+
+          <small class="input-help">
+            Typical slab measurements are often entered in inches.
+          </small>
+
+          <small class="error-message" id="thicknessError"></small>
+        </div>
+
+
+        <!-- WASTE -->
+        <div class="input-group">
+          <label>Waste allowance</label>
+
+          <div class="waste-options">
+            <button type="button" class="waste-btn" data-waste="0">0%</button>
+            <button type="button" class="waste-btn" data-waste="5">5%</button>
+            <button type="button" class="waste-btn active" data-waste="10">10%</button>
+            <button type="button" class="waste-btn" data-waste="15">15%</button>
+          </div>
+
+          <input type="hidden" id="waste" value="10" />
+        </div>
+
+
+        <!-- OPTIONAL COST -->
+        <div class="optional-divider">
+          <span>OPTIONAL</span>
+        </div>
+
+        <div class="input-group">
+          <label for="price">
+            Concrete price
+            <span class="optional-label">per cubic yard</span>
+          </label>
+
+          <div class="currency-input">
+            <span>$</span>
+            <input
+              type="number"
+              id="price"
+              min="0"
+              step="any"
+              placeholder="150"
+            />
+          </div>
+        </div>
+
+
+        <div class="calculator-buttons">
+          <button class="calculate-btn" id="calculateBtn">
+            Calculate Concrete
+            <span>→</span>
+          </button>
+
+          <button class="reset-btn" id="resetBtn" type="button">
+            Reset
+          </button>
+        </div>
+
+      </div>
+
+
+      <!-- RESULTS CARD -->
+      <div class="results-card" id="resultsCard">
+
+        <div class="results-header">
+          <div>
+            <span class="step-label">YOUR RESULT</span>
+            <h3>Concrete needed</h3>
+          </div>
+
+          <div class="result-check">✓</div>
+        </div>
+
+
+        <div class="main-result">
+          <span>Recommended order</span>
+          <div>
+            <strong id="recommendedYards">—</strong>
+            <small>yd³</small>
+          </div>
+          <p>Including your selected waste allowance</p>
+        </div>
+
+
+        <div class="result-grid">
+
+          <div class="result-item">
+            <span>Base volume</span>
+            <strong id="cubicFeet">—</strong>
+            <small>cubic feet</small>
+          </div>
+
+          <div class="result-item">
+            <span>Base volume</span>
+            <strong id="baseYards">—</strong>
+            <small>cubic yards</small>
+          </div>
+
+          <div class="result-item">
+            <span>Waste</span>
+            <strong id="wasteResult">—</strong>
+            <small>allowance</small>
+          </div>
+
+          <div class="result-item">
+            <span>Estimated cost</span>
+            <strong id="estimatedCost">—</strong>
+            <small id="costLabel">enter price above</small>
+          </div>
+
+        </div>
+
+
+        <!-- BAG ESTIMATE -->
+        <div class="bag-section">
+          <div class="bag-heading">
+            <div>
+              <strong>Concrete bag estimate</strong>
+              <span>Approximate quantity</span>
+            </div>
+
+            <select id="bagSize">
+              <option value="40">40 lb</option>
+              <option value="60">60 lb</option>
+              <option value="80" selected>80 lb</option>
+            </select>
+          </div>
+
+          <div class="bag-result">
+            <strong id="bagCount">—</strong>
+            <span>bags</span>
+          </div>
+
+          <p>
+            Bag estimates vary by manufacturer and product yield.
+            Always check the bag label before purchasing.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="info-section" id="how-it-works">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-tag">HOW IT WORKS</span>
+      <h2>Concrete calculation made simple.</h2>
+      <p>
+        You only need three measurements to calculate the basic volume
+        of a rectangular concrete slab.
+      </p>
+    </div>
+
+
+    <div class="steps-grid">
+
+      <article class="step-card">
+        <span class="step-number">01</span>
+        <h3>Enter dimensions</h3>
+        <p>
+          Enter your slab's length, width, and thickness using the units
+          you know.
+        </p>
+      </article>
+
+      <article class="step-card">
+        <span class="step-number">02</span>
+        <h3>Add waste</h3>
+        <p>
+          Choose a waste allowance to account for measurement differences
+          and material waste.
+        </p>
+      </article>
+
+      <article class="step-card">
+        <span class="step-number">03</span>
+        <h3>Get your result</h3>
+        <p>
+          The calculator converts your measurements into cubic feet and
+          cubic yards.
+        </p>
+      </article>
+
+      <article class="step-card">
+        <span class="step-number">04</span>
+        <h3>Estimate materials</h3>
+        <p>
+          Optionally estimate concrete bags and material cost using your
+          own price.
+        </p>
+      </article>
+
+    </div>
+
+
+    <!-- FORMULA -->
+    <div class="formula-card">
+
+      <div class="formula-content">
+        <span class="section-tag">THE FORMULA</span>
+        <h3>How do we calculate concrete?</h3>
+
+        <p>
+          First, all measurements are converted to feet. The length,
+          width, and thickness are then multiplied to find the volume
+          in cubic feet.
+        </p>
+
+        <div class="formula-box">
+          <span>Cubic Feet</span>
+          <strong>Length × Width × Thickness</strong>
+        </div>
+
+        <div class="formula-box">
+          <span>Cubic Yards</span>
+          <strong>Cubic Feet ÷ 27</strong>
+        </div>
+      </div>
+
+      <div class="formula-visual">
+        <div class="slab-illustration">
+          <div class="slab-top"></div>
+          <div class="slab-side"></div>
+          <div class="dimension length-dimension">Length</div>
+          <div class="dimension width-dimension">Width</div>
+          <div class="dimension thickness-dimension">Thickness</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- EXAMPLE -->
+<section class="example-section" id="examples">
+  <div class="container">
+
+    <div class="section-heading centered">
+      <span class="section-tag">EXAMPLE</span>
+      <h2>Concrete slab calculation example</h2>
+      <p>
+        Here's a simple example to understand how the calculation works.
+      </p>
+    </div>
+
+
+    <div class="example-card">
+
+      <div class="example-inputs">
+
+        <div>
+          <span>Length</span>
+          <strong>20 ft</strong>
+        </div>
+
+        <div>
+          <span>Width</span>
+          <strong>10 ft</strong>
+        </div>
+
+        <div>
+          <span>Thickness</span>
+          <strong>4 in</strong>
+        </div>
+
+        <div>
+          <span>Waste</span>
+          <strong>10%</strong>
+        </div>
+
+      </div>
+
+
+      <div class="calculation-line">
+        <span>4 inches ÷ 12</span>
+        <strong>= 0.333 ft</strong>
+      </div>
+
+      <div class="calculation-line">
+        <span>20 × 10 × 0.333</span>
+        <strong>= 66.67 ft³</strong>
+      </div>
+
+      <div class="calculation-line">
+        <span>66.67 ÷ 27</span>
+        <strong>= 2.47 yd³</strong>
+      </div>
+
+      <div class="calculation-line final">
+        <span>With 10% waste</span>
+        <strong>≈ 2.72 yd³</strong>
+      </div>
+
+      <p class="example-note">
+        This is an example calculation. Your actual result depends on
+        the measurements you enter.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PROJECT TYPES -->
+<section class="projects-section">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-tag">COMMON PROJECTS</span>
+      <h2>What can you calculate?</h2>
+      <p>
+        Estimate concrete volume for patios, driveways, garage floors,
+        shed bases, concrete pads, and rectangular walkway sections.
+      </p>
+    </div>
+
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-icon">▰</div>
+        <h3>Concrete Patio</h3>
+        <p>
+          Estimate concrete for a rectangular patio based on its
+          dimensions and thickness.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon">▣</div>
+        <h3>Driveway</h3>
+        <p>
+          Calculate the approximate concrete volume required for a
+          driveway area.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon">⌂</div>
+        <h3>Garage Floor</h3>
+        <p>
+          Estimate concrete volume for a rectangular garage floor slab.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon">▤</div>
+        <h3>Shed Base</h3>
+        <p>
+          Calculate concrete requirements for a rectangular shed base
+          or foundation slab.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon">＋</div>
+        <h3>Concrete Pad</h3>
+        <p>
+          Estimate concrete for equipment pads and other small
+          rectangular concrete areas.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon">═</div>
+        <h3>Walkway</h3>
+        <p>
+          Estimate concrete volume for a rectangular walkway section.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container faq-container">
+
+    <div class="section-heading centered">
+      <span class="section-tag">FAQ</span>
+      <h2>Concrete slab calculator FAQs</h2>
+      <p>
+        Simple answers to common concrete calculation questions.
+      </p>
+    </div>
+
+
+    <div class="faq-list">
+
+      <details>
+        <summary>
+          How do I calculate how much concrete I need?
+          <span>+</span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            Multiply the slab's length by its width and thickness to
+            calculate the volume. Make sure all three measurements use
+            the same unit. For U.S. concrete ordering, convert the
+            resulting cubic feet into cubic yards by dividing by 27.
+          </p>
+        </div>
+      </details>
+
+
+      <details>
+        <summary>
+          How do I convert cubic feet to cubic yards?
+          <span>+</span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            Divide cubic feet by 27. One cubic yard contains 27 cubic
+            feet.
+          </p>
+        </div>
+      </details>
+
+
+      <details>
+        <summary>
+          Should I add extra concrete?
+          <span>+</span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            Many people include an additional allowance because actual
+            measurements, uneven surfaces, spillage, and other factors
+            can affect the amount needed. The appropriate allowance
+            depends on the project.
+          </p>
+        </div>
+      </details>
+
+
+      <details>
+        <summary>
+          How thick should a concrete slab be?
+          <span>+</span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            There is no single thickness that is appropriate for every
+            project. Required thickness depends on the intended use,
+            loads, site conditions, reinforcement, local requirements,
+            and project specifications. Consult a qualified professional
+            when structural requirements matter.
+          </p>
+        </div>
+      </details>
+
+
+      <details>
+        <summary>
+          How many concrete bags do I need?
+          <span>+</span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            Bag quantity depends on the bag size and the manufacturer's
+            stated yield. Our calculator provides an approximate estimate,
+            but always check the yield printed on the specific product
+            you plan to purchase.
+          </p>
+        </div>
+      </details>
+
+
+      <details>
+        <summary>
+          Does this calculator include labor?
+          <span>+</span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            No. The optional cost estimate is based only on the concrete
+            price per cubic yard that you enter. Labor, delivery, taxes,
+            equipment, and other project costs are not included.
+          </p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container cta-inner">
+    <div>
+      <span class="section-tag">READY TO CALCULATE?</span>
+      <h2>Find out how much concrete you need.</h2>
+    </div>
+
+    <a href="#calculator" class="primary-btn light">
+      Open Calculator
+      <span>↑</span>
+    </a>
+  </div>
+</section>
+```
 
   </main>
 
-
   <!-- FOOTER -->
+
   <footer class="footer">
     <div class="container footer-grid">
 
-      <div class="footer-brand">
-        <a href="#top" class="logo">
-          <span class="logo-mark">CS</span>
-          <span>SlabCalc</span>
-        </a>
+```
+  <div class="footer-brand">
+    <a href="#top" class="logo">
+      <span class="logo-mark">CS</span>
+      <span>SlabCalc</span>
+    </a>
 
-        <p>
-          A simple concrete slab calculator for estimating concrete volume,
-          bags, waste allowance, and material cost.
-        </p>
-      </div>
+    <p>
+      A free concrete slab calculator for estimating concrete volume,
+      cubic yards, concrete bags, waste allowance, and material cost.
+    </p>
+  </div>
 
-      <div class="footer-links">
-        <h4>Tools</h4>
-        <a href="#calculator">Concrete Calculator</a>
-        <a href="#examples">Examples</a>
-        <a href="#faq">FAQ</a>
-      </div>
+  <div class="footer-links">
+    <h4>Tools</h4>
+    <a href="#calculator">Concrete Calculator</a>
+    <a href="#examples">Examples</a>
+    <a href="#faq">FAQ</a>
+  </div>
 
-      <div class="footer-links">
-        <h4>Information</h4>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-        <a href="disclaimer.html">Disclaimer</a>
-      </div>
+  <div class="footer-links">
+    <h4>Information</h4>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
 
-    </div>
+</div>
 
-    <div class="container footer-bottom">
-      <span>© 2026 SlabCalc. All rights reserved.</span>
-      <span>Built for practical concrete estimates.</span>
-    </div>
+<div class="container footer-bottom">
+  <span>© 2026 SlabCalc. All rights reserved.</span>
+  <span>Built for practical concrete estimates.</span>
+</div>
+```
+
   </footer>
 
+  <!-- FAQ STRUCTURED DATA -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate how much concrete I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the slab's length by its width and thickness to calculate the volume. Make sure all three measurements use the same unit. For U.S. concrete ordering, convert cubic feet into cubic yards by dividing by 27."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert cubic feet to cubic yards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide cubic feet by 27. One cubic yard contains 27 cubic feet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I add extra concrete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An additional allowance can account for measurement differences, uneven surfaces, spillage, and other factors. The appropriate allowance depends on the project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How thick should a concrete slab be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no single thickness appropriate for every project. Required thickness depends on intended use, loads, site conditions, reinforcement, local requirements, and project specifications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many concrete bags do I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bag quantity depends on bag size and the manufacturer's stated yield. Always check the yield printed on the specific product you plan to purchase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this calculator include labor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The optional cost estimate is based only on the concrete price per cubic yard entered by the user. Labor, delivery, taxes, equipment, and other project costs are not included."
+        }
+      }
+    ]
+  }
+  </script>
 
   <script src="script.js"></script>
+
 </body>
 </html>
