@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Concrete Slab Calculator for Driveway | Calculate Driveway Concrete</title>
+
+  <meta
+    name="description"
+    content="Calculate how much concrete you need for a driveway. Estimate cubic feet, cubic yards, waste allowance, concrete bags, and optional material cost with this free calculator."
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-calculator-for-driveway.html"
+  />
+
+  <meta property="og:title" content="Concrete Slab Calculator for Driveway" />
+  <meta
+    property="og:description"
+    content="Estimate the amount of concrete needed for a driveway using length, width, and thickness."
+  />
+  <meta
+    property="og:url"
+    content="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-calculator-for-driveway.html"
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="SlabCalc" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .article-page {
+      padding: 90px 0;
+    }
+
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .article-card {
+      background: var(--surface, #ffffff);
+      border-radius: 24px;
+      padding: 50px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .article-card h1 {
+      margin: 15px 0 20px;
+    }
+
+    .article-card h2 {
+      margin-top: 45px;
+      margin-bottom: 15px;
+    }
+
+    .article-card h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .article-card p,
+    .article-card li {
+      line-height: 1.8;
+    }
+
+    .article-card ul,
+    .article-card ol {
+      padding-left: 25px;
+    }
+
+    .article-card li {
+      margin-bottom: 8px;
+    }
+
+    .article-intro {
+      font-size: 19px;
+      opacity: 0.85;
+    }
+
+    .article-note {
+      margin: 30px 0;
+      padding: 22px 25px;
+      border-left: 4px solid var(--accent, #c7ff35);
+      background: rgba(199, 255, 53, 0.10);
+      border-radius: 10px;
+    }
+
+    .formula-box {
+      margin: 25px 0;
+      padding: 25px;
+      background: #111;
+      color: #fff;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .formula-box strong {
+      display: block;
+      margin-top: 8px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 24px;
+    }
+
+    .example-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+    }
+
+    .example-table th,
+    .example-table td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+      text-align: left;
+    }
+
+    .example-table th {
+      font-weight: 700;
+    }
+
+    .article-cta {
+      margin-top: 45px;
+      padding: 30px;
+      border-radius: 18px;
+      background: #111;
+      color: #fff;
+    }
+
+    .article-cta h2 {
+      margin-top: 0;
+    }
+
+    .article-cta p {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 700px) {
+      .article-page {
+        padding: 50px 0;
+      }
+
+      .article-card {
+        padding: 28px 20px;
+      }
+
+      .article-card h1 {
+        font-size: 34px;
+      }
+
+      .article-intro {
+        font-size: 17px;
+      }
+
+      .example-table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+
+      <a href="index.html" class="logo" aria-label="SlabCalc home">
+        <span class="logo-mark">CS</span>
+        <span>SlabCalc</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html#calculator">Calculator</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#examples">Examples</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+
+      <a href="index.html#calculator" class="nav-btn">
+        Calculate Now
+      </a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="article-page">
+
+      <div class="container article-container">
+
+        <article class="article-card">
+
+          <span class="section-tag">DRIVEWAY CONCRETE GUIDE</span>
+
+          <h1>
+            Concrete Slab Calculator for Driveway
+          </h1>
+
+          <p class="article-intro">
+            Planning a concrete driveway? Use the driveway dimensions to
+            estimate how much concrete you may need in cubic feet and cubic
+            yards. This guide explains the basic calculation, thickness,
+            waste allowance, and concrete bag estimates.
+          </p>
+
+
+          <h2>How Much Concrete Does a Driveway Need?</h2>
+
+          <p>
+            The amount of concrete required for a driveway depends mainly on
+            its length, width, and thickness. A larger driveway requires more
+            concrete, while increasing the slab thickness also increases the
+            total volume.
+          </p>
+
+          <p>
+            For a rectangular driveway, the basic concrete volume formula is:
+          </p>
+
+          <div class="formula-box">
+            <span>Concrete Volume</span>
+            <strong>Length × Width × Thickness</strong>
+          </div>
+
+          <p>
+            Before calculating, make sure the measurements are converted into
+            compatible units. If the dimensions are measured in feet, the
+            resulting volume will be in cubic feet.
+          </p>
+
+
+          <h2>What Measurements Do You Need?</h2>
+
+          <p>
+            To estimate concrete for a rectangular driveway, you need three
+            main measurements:
+          </p>
+
+          <ul>
+            <li><strong>Length</strong> of the driveway</li>
+            <li><strong>Width</strong> of the driveway</li>
+            <li><strong>Thickness</strong> of the concrete slab</li>
+          </ul>
+
+          <p>
+            You can enter these measurements into the SlabCalc concrete
+            calculator to quickly estimate the required concrete volume.
+          </p>
+
+
+          <h2>Example: 20 × 10 Foot Driveway</h2>
+
+          <p>
+            Suppose a rectangular driveway is 20 feet long, 10 feet wide,
+            and 4 inches thick.
+          </p>
+
+          <table class="example-table">
+            <tr>
+              <th>Measurement</th>
+              <th>Value</th>
+            </tr>
+            <tr>
+              <td>Length</td>
+              <td>20 ft</td>
+            </tr>
+            <tr>
+              <td>Width</td>
+              <td>10 ft</td>
+            </tr>
+            <tr>
+              <td>Thickness</td>
+              <td>4 in</td>
+            </tr>
+          </table>
+
+          <p>
+            First convert the thickness from inches to feet:
+          </p>
+
+          <div class="formula-box">
+            <span>4 ÷ 12</span>
+            <strong>0.333 ft</strong>
+          </div>
+
+          <p>
+            Now multiply the three dimensions:
+          </p>
+
+          <div class="formula-box">
+            <span>20 × 10 × 0.333</span>
+            <strong>≈ 66.67 cubic feet</strong>
+          </div>
+
+          <p>
+            Convert cubic feet to cubic yards by dividing by 27:
+          </p>
+
+          <div class="formula-box">
+            <span>66.67 ÷ 27</span>
+            <strong>≈ 2.47 cubic yards</strong>
+          </div>
+
+          <p>
+            If you choose a 10% waste allowance, the estimated order quantity
+            would be approximately 2.72 cubic yards.
+          </p>
+
+
+          <h2>How Thick Should a Concrete Driveway Be?</h2>
+
+          <p>
+            Driveway slab thickness depends on the project and should not be
+            selected from a single universal number. Factors such as vehicle
+            loads, soil conditions, base preparation, reinforcement, climate,
+            drainage, and local construction requirements can affect the
+            appropriate design.
+          </p>
+
+          <div class="article-note">
+            <strong>Important:</strong>
+            Thickness examples are general information only. For a driveway
+            that must support vehicles or other significant loads, follow
+            applicable local requirements and project specifications and
+            consult a qualified professional when necessary.
+          </div>
+
+
+          <h2>Should You Add Waste to a Driveway Concrete Estimate?</h2>
+
+          <p>
+            A concrete estimate can include an additional allowance because
+            actual site measurements may differ from the planned dimensions.
+            Uneven ground, small measurement differences, spillage, and other
+            factors can affect the amount of material needed.
+          </p>
+
+          <p>
+            SlabCalc lets you select a waste allowance of 0%, 5%, 10%, or 15%
+            so you can see how the estimated order quantity changes.
+          </p>
+
+
+          <h2>How Many Concrete Bags for a Driveway?</h2>
+
+          <p>
+            If you are using bagged concrete instead of ordering ready-mix
+            concrete, the number of bags depends on the bag size and the
+            manufacturer's stated yield.
+          </p>
+
+          <p>
+            SlabCalc provides an approximate bag estimate for 40 lb, 60 lb,
+            and 80 lb bags. Always check the yield printed on the specific
+            product before purchasing.
+          </p>
+
+
+          <h2>Driveway Concrete Cost Estimate</h2>
+
+          <p>
+            Concrete cost can vary depending on location, supplier, delivery,
+            concrete mix, quantity, and other project factors.
+          </p>
+
+          <p>
+            The SlabCalc calculator includes an optional material-cost field.
+            Enter your concrete price per cubic yard to get a simple estimated
+            material cost based on the calculated volume.
+          </p>
+
+          <p>
+            This estimate does not include labor, delivery charges, equipment,
+            taxes, site preparation, reinforcement, or other project costs.
+          </p>
+
+
+          <h2>How to Calculate Driveway Concrete in Cubic Yards</h2>
+
+          <ol>
+            <li>Measure the driveway length in feet.</li>
+            <li>Measure the driveway width in feet.</li>
+            <li>Measure the slab thickness.</li>
+            <li>Convert inches to feet if necessary.</li>
+            <li>Multiply length × width × thickness.</li>
+            <li>Divide cubic feet by 27 to get cubic yards.</li>
+            <li>Add an appropriate waste allowance if needed.</li>
+          </ol>
+
+
+          <div class="article-cta">
+
+            <h2>Calculate Driveway Concrete</h2>
+
+            <p>
+              Enter your driveway dimensions into the free SlabCalc concrete
+              calculator and estimate cubic feet, cubic yards, concrete bags,
+              waste allowance, and optional material cost.
+            </p>
+
+            <a href="index.html#calculator" class="primary-btn light">
+              Open Concrete Calculator
+              <span>→</span>
+            </a>
+
+          </div>
+
+
+          <h2>Frequently Asked Questions</h2>
+
+
+          <h3>How do I calculate concrete for a driveway?</h3>
+
+          <p>
+            Multiply the driveway length by its width and thickness after
+            converting the measurements into compatible units. To convert
+            cubic feet into cubic yards, divide by 27.
+          </p>
+
+
+          <h3>How many cubic yards of concrete do I need for a driveway?</h3>
+
+          <p>
+            The amount depends on the driveway's length, width, and thickness.
+            Use those measurements to calculate the volume and convert the
+            result to cubic yards.
+          </p>
+
+
+          <h3>Does driveway thickness affect concrete quantity?</h3>
+
+          <p>
+            Yes. If the length and width stay the same, increasing the
+            thickness increases the amount of concrete required.
+          </p>
+
+
+          <h3>Should I include waste in my driveway estimate?</h3>
+
+          <p>
+            An additional allowance can account for measurement differences,
+            uneven areas, spillage, and other factors. The appropriate
+            allowance depends on the project.
+          </p>
+
+
+          <h3>Can I calculate driveway concrete in cubic feet?</h3>
+
+          <p>
+            Yes. Multiply length × width × thickness using feet as the unit
+            for each measurement to calculate cubic feet.
+          </p>
+
+
+          <h2>Conclusion</h2>
+
+          <p>
+            Estimating driveway concrete starts with three basic measurements:
+            length, width, and thickness. Once these measurements are
+            converted to compatible units, you can calculate the approximate
+            concrete volume and convert it to cubic yards.
+          </p>
+
+          <p>
+            For a quick estimate, use the
+            <a href="index.html#calculator">
+              SlabCalc Concrete Slab Calculator
+            </a>
+            to calculate your driveway concrete needs.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          <span class="logo-mark">CS</span>
+          <span>SlabCalc</span>
+        </a>
+
+        <p>
+          A free concrete slab calculator for estimating concrete volume,
+          cubic yards, concrete bags, waste allowance, and material cost.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Tools</h4>
+
+        <a href="index.html#calculator">Concrete Calculator</a>
+        <a href="index.html#examples">Examples</a>
+        <a href="index.html#faq">FAQ</a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Information</h4>
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <span>
+        © 2026 SlabCalc. All rights reserved.
+      </span>
+
+      <span>
+        Built for practical concrete estimates.
+      </span>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
