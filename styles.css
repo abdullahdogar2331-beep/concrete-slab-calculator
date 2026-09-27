@@ -1383,3 +1383,13 @@ details[open] summary span {
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
 }
+.desktop-nav a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  padding: 10px 14px;
+}
+
+.desktop-nav a:hover {
+  color: #111;
+}
