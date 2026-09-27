@@ -1,14 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About Concrete Slab Calculator</title>
+  <title>About Us | Concrete Slab Calculator</title>
 
   <meta
     name="description"
-    content="Learn about Concrete Slab Calculator, a free online tool for estimating concrete volume, cubic yards, waste allowance, concrete bags, and project cost."
+    content="Learn about Concrete Slab Calculator, a free online tool designed to make basic concrete slab calculations simple, quick, and accessible."
   >
 
   <link
@@ -16,19 +17,9 @@
     href="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/about.html"
   >
 
-  <meta property="og:title" content="About Concrete Slab Calculator">
-  <meta
-    property="og:description"
-    content="Learn more about our free concrete slab calculation tool."
-  >
-  <meta property="og:type" content="website">
-  <meta
-    property="og:url"
-    content="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/about.html"
-  >
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet"
@@ -37,12 +28,12 @@
   <style>
     :root {
       --bg: #f7f7f5;
-      --text: #111111;
+      --text: #111;
       --muted: #686868;
-      --card: #ffffff;
+      --card: #fff;
       --border: #e7e7e2;
       --accent: #c7ff35;
-      --accent-dark: #8dbb00;
+      --dark: #171918;
     }
 
     * {
@@ -71,19 +62,19 @@
     header {
       padding: 24px 0;
       border-bottom: 1px solid var(--border);
-      background: rgba(247, 247, 245, 0.95);
+      background: rgba(247, 247, 245, 0.96);
     }
 
     .nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
     .logo {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
     }
 
@@ -95,8 +86,9 @@
 
     .nav-links a {
       color: var(--muted);
-      font-weight: 600;
       font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
@@ -104,101 +96,168 @@
     }
 
     .hero {
-      padding: 80px 0 45px;
       text-align: center;
+      padding: 75px 0 50px;
     }
 
     .badge {
       display: inline-block;
       background: var(--accent);
-      padding: 8px 14px;
+      padding: 8px 15px;
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
       margin-bottom: 18px;
+      letter-spacing: 0.04em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Space Grotesk", sans-serif;
     }
 
     h1 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
       line-height: 1.05;
       margin-bottom: 18px;
     }
 
     .hero p {
-      max-width: 760px;
+      max-width: 720px;
       margin: auto;
       color: var(--muted);
-      font-size: 1.08rem;
+      font-size: 1.05rem;
     }
 
     .content {
-      padding: 25px 0 80px;
+      padding: 10px 0 80px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .card {
+    .main-card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      border-radius: 24px;
+      padding: 42px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
     }
 
-    .card.full {
-      grid-column: 1 / -1;
+    .section {
+      margin-bottom: 42px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
     }
 
     h2 {
-      font-family: "Space Grotesk", sans-serif;
       font-size: 1.65rem;
-      margin-bottom: 14px;
+      margin-bottom: 13px;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin-bottom: 7px;
     }
 
     p {
       color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .feature {
+      background: #f3f3ee;
+      border-radius: 17px;
+      padding: 22px;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-3px);
+      border-color: var(--border);
+    }
+
+    .feature-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: var(--dark);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.82rem;
+      font-weight: 700;
       margin-bottom: 14px;
     }
 
-    ul {
-      padding-left: 20px;
-      color: var(--muted);
+    .feature h3 {
+      margin-bottom: 7px;
     }
 
-    li {
-      margin-bottom: 9px;
+    .feature p {
+      margin-bottom: 0;
+      font-size: 0.92rem;
+    }
+
+    .notice {
+      background: var(--dark);
+      color: white;
+      border-radius: 20px;
+      padding: 28px;
+      margin-top: 24px;
+    }
+
+    .notice h3 {
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .notice p {
+      color: #d7d7d7;
+      margin-bottom: 0;
     }
 
     .cta {
-      margin-top: 25px;
-      background: #111111;
-      color: white;
-      border-radius: 24px;
-      padding: 35px;
-      text-align: center;
+      margin-top: 35px;
+      padding: 28px;
+      background: var(--accent);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .cta h2 {
-      color: white;
+      margin-bottom: 5px;
     }
 
     .cta p {
-      color: #cfcfcf;
+      margin-bottom: 0;
+      color: #333;
     }
 
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #111;
-      padding: 13px 20px;
-      border-radius: 12px;
+    .cta-button {
+      background: var(--dark);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 11px;
       font-weight: 700;
-      margin-top: 8px;
+      white-space: nowrap;
+      transition: transform 0.2s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
     }
 
     footer {
@@ -225,7 +284,7 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       .container {
         width: min(100% - 24px, 1100px);
       }
@@ -235,20 +294,26 @@
         align-items: flex-start;
       }
 
-      .grid {
+      .hero {
+        padding: 55px 0 35px;
+      }
+
+      .main-card {
+        padding: 25px;
+      }
+
+      .feature-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding: 55px 0 30px;
+      .cta {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .card.full {
-        grid-column: auto;
-      }
-
-      .card {
-        padding: 22px;
+      .cta-button {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -258,13 +323,19 @@
 
   <header>
     <div class="container nav">
-      <a href="index.html" class="logo">Concrete Slab Calculator</a>
+
+      <a href="index.html" class="logo">
+        Concrete Slab Calculator
+      </a>
 
       <nav class="nav-links">
         <a href="index.html">Calculator</a>
-        <a href="index.html#how-it-works">How It Works</a>
-        <a href="index.html#faq">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
       </nav>
+
     </div>
   </header>
 
@@ -272,121 +343,163 @@
 
     <section class="hero">
       <div class="container">
-        <span class="badge">ABOUT THE TOOL</span>
 
-        <h1>About Concrete Slab Calculator</h1>
+        <span class="badge">ABOUT US</span>
+
+        <h1>
+          Making Concrete<br>
+          Calculations Simpler
+        </h1>
 
         <p>
-          Concrete Slab Calculator is a free online tool designed to help
-          homeowners, DIY builders, contractors, and construction professionals
-          estimate the amount of concrete needed for slab projects.
+          Concrete Slab Calculator is a free online tool created to make
+          basic concrete calculations easier, faster, and more accessible.
         </p>
+
       </div>
     </section>
 
     <section class="content">
       <div class="container">
 
-        <div class="grid">
+        <div class="main-card">
 
-          <article class="card">
+          <div class="section">
             <h2>What We Do</h2>
 
             <p>
-              Our calculator makes concrete quantity estimates easier by
-              converting slab dimensions into cubic feet and cubic yards.
+              Planning a concrete slab project often starts with a simple
+              question: how much concrete will be needed?
             </p>
 
             <p>
-              Users can also add a waste allowance and enter their own local
-              concrete price to estimate a project cost.
-            </p>
-          </article>
-
-          <article class="card">
-            <h2>Who Is It For?</h2>
-
-            <p>
-              The tool can be useful for a wide range of users, including:
-            </p>
-
-            <ul>
-              <li>Homeowners planning concrete projects</li>
-              <li>DIY builders</li>
-              <li>Contractors and construction crews</li>
-              <li>Handymen and remodelers</li>
-              <li>People comparing concrete material estimates</li>
-            </ul>
-          </article>
-
-          <article class="card full">
-            <h2>How The Calculator Works</h2>
-
-            <p>
-              Enter the length, width, and thickness of your slab. The
-              calculator converts the measurements into feet and calculates the
-              concrete volume.
+              Concrete Slab Calculator helps users estimate concrete
+              requirements by entering basic slab dimensions. The goal is to
+              provide a straightforward calculation without complicated
+              software or manual formulas.
             </p>
 
             <p>
-              The basic calculation uses:
+              Whether you're a homeowner planning a project, a builder checking
+              an estimate, a contractor reviewing quantities, or simply
+              learning how concrete calculations work, our calculator is
+              designed to give you a useful starting point.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>Designed for Simple Calculations</h2>
+
+            <div class="feature-grid">
+
+              <div class="feature">
+                <span class="feature-number">01</span>
+
+                <h3>Easy to Use</h3>
+
+                <p>
+                  Enter your slab dimensions and get an estimate without
+                  complicated steps.
+                </p>
+              </div>
+
+              <div class="feature">
+                <span class="feature-number">02</span>
+
+                <h3>Free Access</h3>
+
+                <p>
+                  Use the calculator online without creating an account or
+                  paying for basic calculations.
+                </p>
+              </div>
+
+              <div class="feature">
+                <span class="feature-number">03</span>
+
+                <h3>Practical</h3>
+
+                <p>
+                  Get quick estimates that can help with basic project
+                  planning and material discussions.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Who Can Use It?</h2>
+
+            <p>
+              The calculator is intended for a wide range of users, including
+              homeowners, DIY users, builders, contractors, students, and
+              anyone who needs a quick concrete volume estimate.
             </p>
 
             <p>
-              <strong>
-                Length × Width × Thickness = Cubic Feet
-              </strong>
+              It can be useful when preparing an initial project estimate,
+              checking a calculation, or understanding how slab dimensions
+              affect concrete quantity.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>Accuracy Matters</h2>
+
+            <p>
+              Calculator results are estimates based on the measurements and
+              information entered by the user. Actual concrete requirements may
+              vary depending on site conditions, slab shape, measurement
+              accuracy, construction methods, waste, reinforcement, and other
+              project-specific factors.
+            </p>
+
+            <div class="notice">
+
+              <h3>Important Note</h3>
+
+              <p>
+                This website is intended for general information and planning
+                purposes. For structural work or professional construction
+                projects, calculations and material requirements should be
+                verified by a qualified construction professional.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Our Goal</h2>
+
+            <p>
+              Our goal is simple: provide useful construction calculators that
+              are easy to understand and convenient to use.
             </p>
 
             <p>
-              Cubic feet are then converted to cubic yards by dividing by 27.
-              A selected waste allowance can then be added to provide a
-              recommended order quantity.
+              We will continue improving the website and adding useful tools
+              and resources that can help users with everyday construction
+              calculations.
             </p>
-          </article>
+          </div>
 
-          <article class="card">
-            <h2>Why Waste Allowance Matters</h2>
+          <div class="cta">
 
-            <p>
-              Real construction projects can have small material losses caused
-              by uneven surfaces, measuring differences, spills, or changes
-              during installation.
-            </p>
+            <div>
+              <h2>Have a Question?</h2>
 
-            <p>
-              Adding a waste allowance can help create a more practical
-              ordering estimate.
-            </p>
-          </article>
+              <p>
+                We'd be happy to hear your feedback or suggestions.
+              </p>
+            </div>
 
-          <article class="card">
-            <h2>Use Local Pricing</h2>
+            <a href="contact.html" class="cta-button">
+              Contact Us
+            </a>
 
-            <p>
-              Concrete prices can vary by location, supplier, delivery fees,
-              concrete mix, and project requirements.
-            </p>
+          </div>
 
-            <p>
-              That's why the calculator allows you to enter your own price per
-              cubic yard instead of assuming one fixed national price.
-            </p>
-          </article>
-
-        </div>
-
-        <div class="cta">
-          <h2>Ready to Calculate Your Concrete?</h2>
-
-          <p>
-            Use the free calculator to estimate the concrete quantity for your
-            next slab project.
-          </p>
-
-          <a href="index.html#calculator" class="btn">
-            Open Calculator
-          </a>
         </div>
 
       </div>
@@ -395,7 +508,9 @@
   </main>
 
   <footer>
+
     <div class="container footer-inner">
+
       <div>
         © 2026 Concrete Slab Calculator
       </div>
@@ -407,8 +522,11 @@
         <a href="terms.html">Terms</a>
         <a href="disclaimer.html">Disclaimer</a>
       </div>
+
     </div>
+
   </footer>
 
 </body>
 </html>
+```
