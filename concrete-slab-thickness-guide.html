@@ -1,132 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Concrete Slab Thickness Guide – How Thick Should a Slab Be?</title>
+  <title>Concrete Slab Thickness Guide | How Thick Should a Slab Be?</title>
 
-  <meta name="description" content="Learn how to choose concrete slab thickness for common projects. Understand typical slab thicknesses, factors that affect thickness, and how concrete volume is calculated.">
+  <meta
+    name="description"
+    content="Learn about concrete slab thickness, common thicknesses for different projects, factors that affect slab thickness, and how thickness affects concrete volume."
+  />
 
-  <meta name="keywords" content="concrete slab thickness, concrete slab thickness guide, how thick should a concrete slab be, slab thickness, concrete slab">
+  <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-thickness-guide.html">
+  <link
+    rel="canonical"
+    href="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-thickness-guide.html"
+  />
 
-  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Concrete Slab Thickness Guide" />
+  <meta
+    property="og:description"
+    content="Learn how concrete slab thickness affects concrete volume and understand the factors that determine slab thickness."
+  />
+  <meta
+    property="og:url"
+    content="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-thickness-guide.html"
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="SlabCalc" />
 
-  <meta property="og:title" content="Concrete Slab Thickness Guide">
-  <meta property="og:description" content="Learn about common concrete slab thicknesses and the factors that affect slab thickness.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-thickness-guide.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
 
   <style>
-    * {
-      box-sizing: border-box;
+    .article-page {
+      padding: 90px 0;
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-      line-height: 1.7;
-    }
-
-    header {
-      background: #111827;
-      color: white;
-      padding: 45px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 12px;
-      font-size: 38px;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 18px;
-      color: #d1d5db;
-    }
-
-    .container {
+    .article-container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
     }
 
-    article {
-      background: white;
-      padding: 35px;
-      border-radius: 12px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    .article-card {
+      background: var(--surface, #ffffff);
+      border-radius: 24px;
+      padding: 50px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
     }
 
-    h2 {
+    .article-card h1 {
+      margin: 15px 0 20px;
+    }
+
+    .article-card h2 {
+      margin-top: 45px;
+      margin-bottom: 15px;
+    }
+
+    .article-card h3 {
       margin-top: 30px;
-      color: #111827;
-      font-size: 28px;
-    }
-
-    h3 {
-      color: #1f2937;
-      margin-top: 24px;
-    }
-
-    p {
-      font-size: 17px;
-    }
-
-    ul {
-      padding-left: 25px;
-    }
-
-    li {
       margin-bottom: 10px;
     }
 
-    .note {
-      background: #f0fdf4;
-      border-left: 5px solid #16a34a;
-      padding: 18px;
+    .article-card p,
+    .article-card li {
+      line-height: 1.8;
+    }
+
+    .article-card ul {
+      padding-left: 25px;
+    }
+
+    .article-card li {
+      margin-bottom: 8px;
+    }
+
+    .article-intro {
+      font-size: 19px;
+      opacity: 0.85;
+    }
+
+    .article-note {
+      margin: 30px 0;
+      padding: 22px 25px;
+      border-left: 4px solid var(--accent, #c7ff35);
+      background: rgba(199, 255, 53, 0.10);
+      border-radius: 10px;
+    }
+
+    .formula-box {
       margin: 25px 0;
-      border-radius: 6px;
-    }
-
-    .calculator-link {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 13px 22px;
-      background: #111827;
-      color: white;
-      text-decoration: none;
-      border-radius: 7px;
-      font-weight: bold;
-    }
-
-    .calculator-link:hover {
-      opacity: 0.9;
-    }
-
-    footer {
+      padding: 25px;
+      background: #111;
+      color: #fff;
+      border-radius: 15px;
       text-align: center;
-      padding: 30px 20px;
-      color: #666;
-      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 30px;
+    .formula-box strong {
+      display: block;
+      margin-top: 8px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 24px;
+    }
+
+    .article-cta {
+      margin-top: 45px;
+      padding: 30px;
+      border-radius: 18px;
+      background: #111;
+      color: #fff;
+    }
+
+    .article-cta h2 {
+      margin-top: 0;
+    }
+
+    .article-cta p {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 700px) {
+      .article-page {
+        padding: 50px 0;
       }
 
-      article {
-        padding: 22px;
+      .article-card {
+        padding: 28px 20px;
       }
 
-      h2 {
-        font-size: 24px;
+      .article-card h1 {
+        font-size: 34px;
+      }
+
+      .article-intro {
+        font-size: 17px;
       }
     }
   </style>
@@ -134,187 +151,392 @@
 
 <body>
 
-  <header>
-    <h1>Concrete Slab Thickness Guide</h1>
-    <p>Learn how slab thickness affects concrete requirements and common construction projects.</p>
-  </header>
+  <header class="site-header">
+    <div class="container nav">
 
-  <main class="container">
-    <article>
-
-      <p>
-        Choosing the right concrete slab thickness is an important part of planning a construction project.
-        The required thickness can vary depending on how the slab will be used, the expected loads,
-        ground conditions, reinforcement, and local construction requirements.
-      </p>
-
-      <h2>What Is Concrete Slab Thickness?</h2>
-
-      <p>
-        Concrete slab thickness is the vertical depth of a concrete slab. It is normally measured in
-        inches, centimeters, or millimeters. A thicker slab generally requires more concrete, which
-        directly affects the total material volume and project cost.
-      </p>
-
-      <h2>Common Concrete Slab Thicknesses</h2>
-
-      <p>
-        Different projects may use different slab thicknesses. Some common examples include:
-      </p>
-
-      <ul>
-        <li><strong>4 inches:</strong> Common for many residential slabs and light-duty applications.</li>
-        <li><strong>5 inches:</strong> May be used where additional thickness is appropriate for the project.</li>
-        <li><strong>6 inches:</strong> Often considered for heavier-duty applications, depending on engineering requirements.</li>
-      </ul>
-
-      <div class="note">
-        <strong>Important:</strong> These are general examples, not structural design requirements.
-        The correct slab thickness should be determined according to the specific project,
-        applicable building codes, soil conditions, loads, reinforcement, and professional engineering requirements.
-      </div>
-
-      <h2>Factors That Affect Concrete Slab Thickness</h2>
-
-      <h3>1. Intended Use</h3>
-
-      <p>
-        A slab designed for a residential floor may have different requirements from a slab intended
-        for a driveway, garage, workshop, patio, or other application.
-      </p>
-
-      <h3>2. Expected Load</h3>
-
-      <p>
-        The amount and type of load placed on the slab can affect the required design. Areas exposed
-        to vehicles, equipment, or other heavier loads may require a different structural design.
-      </p>
-
-      <h3>3. Soil and Ground Conditions</h3>
-
-      <p>
-        Soil conditions can influence how a slab should be designed and supported. Proper preparation
-        and compaction of the base can also be important for slab performance.
-      </p>
-
-      <h3>4. Reinforcement</h3>
-
-      <p>
-        Reinforcement such as steel bars or welded wire reinforcement may be included depending on
-        the project design. Reinforcement requirements should be determined as part of the overall
-        structural design.
-      </p>
-
-      <h3>5. Local Building Requirements</h3>
-
-      <p>
-        Construction requirements can vary by location and project type. Always check applicable
-        local building codes and professional recommendations before construction.
-      </p>
-
-      <h2>How Slab Thickness Affects Concrete Volume</h2>
-
-      <p>
-        Once the slab dimensions and thickness are known, the approximate concrete volume can be
-        calculated using a simple formula:
-      </p>
-
-      <p>
-        <strong>Concrete Volume = Length × Width × Thickness</strong>
-      </p>
-
-      <p>
-        The units must be consistent when using this formula. For example, if length, width, and
-        thickness are all measured in feet, the result will be in cubic feet.
-      </p>
-
-      <h2>Example: 10 × 10 Foot Slab</h2>
-
-      <p>
-        Suppose you have a 10 × 10 foot slab with a thickness of 4 inches.
-        First convert the thickness into feet:
-      </p>
-
-      <p>
-        4 inches ÷ 12 = 0.333 feet
-      </p>
-
-      <p>
-        Then calculate the volume:
-      </p>
-
-      <p>
-        10 × 10 × 0.333 ≈ 33.3 cubic feet
-      </p>
-
-      <p>
-        This example shows why slab thickness is an important input when estimating the amount
-        of concrete required.
-      </p>
-
-      <h2>How to Calculate Concrete for a Slab</h2>
-
-      <p>
-        To estimate concrete requirements, you need three main measurements:
-      </p>
-
-      <ul>
-        <li>Slab length</li>
-        <li>Slab width</li>
-        <li>Slab thickness</li>
-      </ul>
-
-      <p>
-        You can use our concrete slab calculator to quickly estimate the concrete volume required
-        for your project.
-      </p>
-
-      <a class="calculator-link" href="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/">
-        Use the Concrete Slab Calculator
+      <a href="index.html" class="logo" aria-label="SlabCalc home">
+        <span class="logo-mark">CS</span>
+        <span>SlabCalc</span>
       </a>
 
-      <h2>Frequently Asked Questions</h2>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html#calculator">Calculator</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#examples">Examples</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
 
-      <h3>How thick is a typical concrete slab?</h3>
+      <a href="index.html#calculator" class="nav-btn">
+        Calculate Now
+      </a>
 
-      <p>
-        A 4-inch slab is a common example for many residential and light-duty applications, but the
-        appropriate thickness depends on the specific project and its design requirements.
-      </p>
+    </div>
+  </header>
 
-      <h3>Does thicker concrete require more concrete?</h3>
 
-      <p>
-        Yes. Increasing slab thickness increases the volume of concrete required when the length
-        and width remain the same.
-      </p>
+  <main>
 
-      <h3>Can I choose slab thickness myself?</h3>
+    <section class="article-page">
 
-      <p>
-        For basic estimating, you can calculate concrete volume using a chosen thickness. However,
-        structural slab thickness should be selected according to the project's requirements,
-        applicable codes, and professional engineering guidance.
-      </p>
+      <div class="container article-container">
 
-      <h2>Conclusion</h2>
+        <article class="article-card">
 
-      <p>
-        Concrete slab thickness is an important factor when planning a construction project because
-        it affects both the slab design and the amount of concrete required. Understanding the
-        length, width, and thickness of a slab makes it easier to estimate concrete volume accurately.
-      </p>
+          <span class="section-tag">CONCRETE GUIDE</span>
 
-      <p>
-        For a quick estimate, use our concrete slab calculator to calculate the amount of concrete
-        needed for your slab.
-      </p>
+          <h1>
+            Concrete Slab Thickness Guide
+          </h1>
 
-    </article>
+          <p class="article-intro">
+            Concrete slab thickness is an important factor when planning a
+            patio, driveway, garage floor, shed base, walkway, or other
+            concrete project. This guide explains common slab thicknesses,
+            the factors that affect thickness, and how thickness changes the
+            amount of concrete required.
+          </p>
+
+
+          <h2>What Is Concrete Slab Thickness?</h2>
+
+          <p>
+            Concrete slab thickness is the depth of the concrete measured
+            from the top surface to the bottom of the slab. It is commonly
+            measured in inches, feet, millimeters, or centimeters.
+          </p>
+
+          <p>
+            Slab thickness is also an important measurement when calculating
+            concrete volume. If the length and width stay the same, a thicker
+            slab requires more concrete.
+          </p>
+
+
+          <h2>How Thick Should a Concrete Slab Be?</h2>
+
+          <p>
+            There is no single slab thickness that is suitable for every
+            project. The appropriate thickness depends on the intended use,
+            expected loads, ground conditions, reinforcement, local building
+            requirements, and project specifications.
+          </p>
+
+          <p>
+            For many residential and light-duty applications, 4 inches is a
+            commonly used example of slab thickness. Heavier-duty projects
+            may require a different thickness and structural design.
+          </p>
+
+          <div class="article-note">
+            <strong>Important:</strong>
+            General thickness examples should not be treated as structural
+            design advice. For structural projects, follow applicable building
+            codes and project specifications and consult a qualified
+            construction or structural professional when necessary.
+          </div>
+
+
+          <h2>Common Concrete Slab Thicknesses</h2>
+
+          <p>
+            The following are common thickness examples used in different
+            situations:
+          </p>
+
+          <ul>
+            <li>
+              <strong>4 inches:</strong> A common example for many residential
+              and light-duty concrete slabs.
+            </li>
+
+            <li>
+              <strong>5 inches:</strong> May be used when a project requires
+              additional slab depth.
+            </li>
+
+            <li>
+              <strong>6 inches:</strong> May be considered for applications
+              involving greater loads, depending on the project design.
+            </li>
+          </ul>
+
+          <p>
+            These examples are not universal requirements. The correct design
+            should be based on the specific project.
+          </p>
+
+
+          <h2>Factors That Affect Slab Thickness</h2>
+
+
+          <h3>1. Intended Use</h3>
+
+          <p>
+            A residential patio, driveway, garage floor, shed base, and
+            equipment pad can have different requirements. The purpose of the
+            slab should be considered before selecting its design.
+          </p>
+
+
+          <h3>2. Expected Loads</h3>
+
+          <p>
+            The loads placed on a slab can affect its required design. Areas
+            that support vehicles, equipment, or heavier loads may require
+            different specifications than areas used only for normal
+            residential purposes.
+          </p>
+
+
+          <h3>3. Ground Conditions</h3>
+
+          <p>
+            Soil and base conditions can affect concrete slab performance.
+            Proper site preparation, drainage, and base preparation are
+            important considerations for many slab projects.
+          </p>
+
+
+          <h3>4. Reinforcement</h3>
+
+          <p>
+            Some concrete slabs use reinforcement such as reinforcing steel
+            or welded wire reinforcement. Reinforcement requirements depend on
+            the project's design and should be determined appropriately for
+            the application.
+          </p>
+
+
+          <h3>5. Local Requirements</h3>
+
+          <p>
+            Building requirements can vary depending on location and project
+            type. Always check the applicable local requirements before
+            construction.
+          </p>
+
+
+          <h2>How Slab Thickness Affects Concrete Volume</h2>
+
+          <p>
+            Concrete volume for a rectangular slab can be calculated by
+            multiplying length, width, and thickness.
+          </p>
+
+          <div class="formula-box">
+            <span>Concrete Volume</span>
+            <strong>Length × Width × Thickness</strong>
+          </div>
+
+          <p>
+            The measurements should be converted to compatible units before
+            performing the calculation. For example, when all measurements
+            are in feet, the result is cubic feet.
+          </p>
+
+
+          <h2>Example: 10 × 10 Foot Slab</h2>
+
+          <p>
+            Consider a rectangular slab that is 10 feet long, 10 feet wide,
+            and 4 inches thick.
+          </p>
+
+          <p>
+            First convert 4 inches to feet:
+          </p>
+
+          <div class="formula-box">
+            <span>4 inches ÷ 12</span>
+            <strong>0.333 feet</strong>
+          </div>
+
+          <p>
+            Then calculate the approximate concrete volume:
+          </p>
+
+          <div class="formula-box">
+            <span>10 × 10 × 0.333</span>
+            <strong>≈ 33.3 cubic feet</strong>
+          </div>
+
+          <p>
+            This illustrates how slab thickness becomes one of the key
+            measurements when estimating concrete requirements.
+          </p>
+
+
+          <h2>How to Calculate Concrete for a Slab</h2>
+
+          <p>
+            To estimate the concrete volume for a rectangular slab, you need
+            three basic measurements:
+          </p>
+
+          <ul>
+            <li>Length</li>
+            <li>Width</li>
+            <li>Thickness</li>
+          </ul>
+
+          <p>
+            After converting the measurements to compatible units, multiply
+            length × width × thickness to get the basic volume.
+          </p>
+
+          <p>
+            If you are ordering concrete in the United States, cubic feet can
+            be converted to cubic yards by dividing the cubic-foot result by
+            27.
+          </p>
+
+
+          <div class="article-cta">
+
+            <h2>Calculate Your Concrete Needs</h2>
+
+            <p>
+              Use the free SlabCalc concrete slab calculator to estimate
+              cubic feet, cubic yards, concrete bags, waste allowance, and
+              optional material cost.
+            </p>
+
+            <a href="index.html#calculator" class="primary-btn light">
+              Open Concrete Calculator
+              <span>→</span>
+            </a>
+
+          </div>
+
+
+          <h2>Frequently Asked Questions</h2>
+
+
+          <h3>Is 4 inches thick enough for a concrete slab?</h3>
+
+          <p>
+            Four inches is a common example for many residential and
+            light-duty slabs, but whether it is appropriate depends on the
+            project's intended use, loads, site conditions, reinforcement,
+            and applicable requirements.
+          </p>
+
+
+          <h3>Does a thicker slab require more concrete?</h3>
+
+          <p>
+            Yes. If the length and width remain the same, increasing the slab
+            thickness increases the total concrete volume.
+          </p>
+
+
+          <h3>What measurements do I need to calculate concrete?</h3>
+
+          <p>
+            For a rectangular slab, you generally need the length, width, and
+            thickness. These measurements can then be used to calculate the
+            approximate concrete volume.
+          </p>
+
+
+          <h3>How do I convert inches to feet?</h3>
+
+          <p>
+            Divide the measurement in inches by 12. For example, 4 inches
+            divided by 12 equals approximately 0.333 feet.
+          </p>
+
+
+          <h3>Should I add extra concrete?</h3>
+
+          <p>
+            An additional allowance can help account for measurement
+            differences, uneven surfaces, spillage, and other factors.
+            The appropriate allowance depends on the project.
+          </p>
+
+
+          <h2>Conclusion</h2>
+
+          <p>
+            Concrete slab thickness affects both the design of a slab and the
+            amount of concrete required. Understanding the relationship
+            between length, width, and thickness makes concrete volume
+            estimation easier.
+          </p>
+
+          <p>
+            For a quick estimate, use the
+            <a href="index.html#calculator">SlabCalc Concrete Slab Calculator</a>
+            to calculate the concrete volume for your project.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <footer>
-    © 2026 Concrete Slab Calculator. All rights reserved.
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          <span class="logo-mark">CS</span>
+          <span>SlabCalc</span>
+        </a>
+
+        <p>
+          A free concrete slab calculator for estimating concrete volume,
+          cubic yards, concrete bags, waste allowance, and material cost.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Tools</h4>
+
+        <a href="index.html#calculator">Concrete Calculator</a>
+        <a href="index.html#examples">Examples</a>
+        <a href="index.html#faq">FAQ</a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Information</h4>
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <span>
+        © 2026 SlabCalc. All rights reserved.
+      </span>
+
+      <span>
+        Built for practical concrete estimates.
+      </span>
+
+    </div>
+
   </footer>
 
 </body>
