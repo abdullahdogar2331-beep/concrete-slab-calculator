@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Concrete Slab Calculator in Cubic Meters | SlabCalc</title>
+
+  <meta
+    name="description"
+    content="Use this concrete slab calculator in cubic meters to estimate how much concrete you need for a slab. Learn the formula, see an example, and calculate concrete volume easily."
+  />
+
+  <meta
+    name="keywords"
+    content="concrete slab calculator cubic meters, concrete calculator cubic meters, slab concrete calculator, concrete needed for slab, concrete quantity calculator"
+  />
+
+  <link
+    rel="canonical"
+    href="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-calculator-cubic-meters.html"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Concrete Slab Calculator in Cubic Meters | SlabCalc" />
+  <meta
+    property="og:description"
+    content="Calculate the concrete volume needed for a slab in cubic meters with this simple guide and calculator."
+  />
+  <meta
+    property="og:url"
+    content="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-calculator-cubic-meters.html"
+  />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --text: #171717;
+      --muted: #666;
+      --accent: #c7ff35;
+      --dark: #111;
+      --border: #deded9;
+      --card: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 247, 245, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--dark);
+      color: var(--accent);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      letter-spacing: -0.04em;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .desktop-nav a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #222;
+      padding: 10px 14px;
+      text-decoration: none;
+    }
+
+    .desktop-nav a:hover {
+      color: #111;
+    }
+
+    .nav-btn {
+      background: var(--dark);
+      color: white !important;
+      border-radius: 999px;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 70px 24px 90px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #444;
+      background: white;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Space Grotesk", sans-serif;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      margin-bottom: 22px;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1.12rem;
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 50px 0 18px;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      margin: 30px 0 12px;
+    }
+
+    p {
+      margin-bottom: 18px;
+    }
+
+    ul,
+    ol {
+      padding-left: 24px;
+      margin-bottom: 22px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .formula {
+      background: var(--dark);
+      color: white;
+      padding: 28px;
+      border-radius: 20px;
+      margin: 28px 0;
+      overflow-x: auto;
+    }
+
+    .formula strong {
+      color: var(--accent);
+    }
+
+    .example {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: 20px;
+      margin: 28px 0;
+    }
+
+    .example-result {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: var(--accent);
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .cta {
+      margin-top: 55px;
+      padding: 34px;
+      background: var(--dark);
+      color: white;
+      border-radius: 24px;
+    }
+
+    .cta h2 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .cta p {
+      color: #ddd;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 13px 20px;
+      background: var(--accent);
+      color: var(--dark);
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .faq {
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        padding: 14px 18px;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
+
+      main {
+        padding: 50px 20px 70px;
+      }
+
+      h1 {
+        font-size: 2.65rem;
+      }
+
+      h2 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Concrete Slab Calculator in Cubic Meters",
+    "description": "Learn how to calculate the amount of concrete needed for a slab in cubic meters.",
+    "author": {
+      "@type": "Organization",
+      "name": "SlabCalc"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SlabCalc"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/concrete-slab-calculator-cubic-meters.html"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate concrete in cubic meters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the slab length in meters by the slab width in meters and the slab thickness in meters. The result is the concrete volume in cubic meters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula for concrete volume?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The formula is length × width × thickness. Make sure all three measurements use the same unit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I order extra concrete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A small amount of extra concrete is commonly considered to account for measurement differences, waste, and uneven ground conditions."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body id="top">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="SlabCalc home">
+        <span class="logo-mark">CS</span>
+        <span>SlabCalc</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#calculator">Calculator</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#calculator" class="nav-btn">Calculate Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <span class="eyebrow">Concrete Calculator Guide</span>
+
+    <h1>Concrete Slab Calculator in Cubic Meters</h1>
+
+    <p class="intro">
+      Need to know how much concrete you need for a slab? This guide explains
+      how to calculate concrete volume in cubic meters using a simple length ×
+      width × thickness formula.
+    </p>
+
+    <h2>How to Calculate Concrete in Cubic Meters</h2>
+
+    <p>
+      To calculate the amount of concrete required for a slab, measure the
+      length, width, and thickness of the slab. Convert all measurements to
+      meters and multiply them together.
+    </p>
+
+    <div class="formula">
+      <p><strong>Concrete Volume = Length × Width × Thickness</strong></p>
+      <p>Result = cubic meters (m³)</p>
+    </div>
+
+    <h2>Example: Concrete for a Slab</h2>
+
+    <div class="example">
+      <h3>Example measurements</h3>
+
+      <p>
+        Length = 5 meters
+      </p>
+
+      <p>
+        Width = 4 meters
+      </p>
+
+      <p>
+        Thickness = 0.10 meters (100 mm)
+      </p>
+
+      <p>
+        Concrete volume = 5 × 4 × 0.10
+      </p>
+
+      <span class="example-result">
+        2 cubic meters of concrete
+      </span>
+    </div>
+
+    <h2>Why Thickness Matters</h2>
+
+    <p>
+      Slab thickness has a direct effect on the amount of concrete required.
+      A thicker slab requires more concrete even when the length and width stay
+      the same.
+    </p>
+
+    <p>
+      For example, increasing a slab from 100 mm to 150 mm thick increases the
+      concrete volume by 50%, assuming the length and width remain unchanged.
+    </p>
+
+    <h2>Convert Measurements to Meters First</h2>
+
+    <p>
+      When using cubic meters, make sure all measurements are in meters before
+      calculating the volume.
+    </p>
+
+    <ul>
+      <li>100 mm = 0.10 meters</li>
+      <li>150 mm = 0.15 meters</li>
+      <li>200 mm = 0.20 meters</li>
+      <li>1 centimeter = 0.01 meters</li>
+    </ul>
+
+    <h2>Use Our Concrete Slab Calculator</h2>
+
+    <p>
+      Instead of calculating the volume manually, you can use the free
+      Concrete Slab Calculator to quickly estimate the concrete needed for
+      your project.
+    </p>
+
+    <div class="cta">
+      <h2>Calculate Your Concrete</h2>
+
+      <p>
+        Enter your slab dimensions and get your concrete volume estimate
+        quickly.
+      </p>
+
+      <a href="index.html#calculator">
+        Open Concrete Slab Calculator
+      </a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h3>How do I calculate concrete in cubic meters?</h3>
+      <p>
+        Multiply the length by the width and thickness, with all measurements
+        converted to meters first. The result is the required volume in cubic
+        meters.
+      </p>
+    </div>
+
+    <div class="faq">
+      <h3>What is the formula for concrete volume?</h3>
+      <p>
+        The basic formula is length × width × thickness. All three dimensions
+        should use the same unit.
+      </p>
+    </div>
+
+    <div class="faq">
+      <h3>Should I order extra concrete?</h3>
+      <p>
+        It can be useful to allow a small amount of extra concrete for
+        measurement differences, waste, and uneven ground conditions.
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 SlabCalc. Free Concrete Slab Calculator.
+  </footer>
+
+</body>
+</html>
