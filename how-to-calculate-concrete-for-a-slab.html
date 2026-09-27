@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How to Calculate Concrete for a Slab | Easy Guide</title>
+
+  <meta name="description" content="Learn how to calculate the concrete needed for a slab using length, width, and thickness. Simple formulas with cubic feet, cubic yards, and cubic meters.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/how-to-calculate-concrete-for-a-slab.html">
+
+  <meta property="og:title" content="How to Calculate Concrete for a Slab">
+  <meta property="og:description" content="A simple guide to calculating concrete volume for slabs using length, width, and thickness.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://abdullahdogar2331-beep.github.io/concrete-slab-calculator/how-to-calculate-concrete-for-a-slab.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --text: #171717;
+      --muted: #666;
+      --accent: #c7ff35;
+      --dark: #111;
+      --border: #deded9;
+      --card: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(247,247,245,.96);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: var(--dark);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+    }
+
+    .desktop-nav {
+      display: flex;
+      gap: 7px;
+    }
+
+    .desktop-nav a {
+      padding: 9px 13px;
+      border-radius: 8px;
+      font-size: .94rem;
+      font-weight: 600;
+    }
+
+    .desktop-nav a:hover {
+      background: #e9e9e4;
+    }
+
+    .nav-btn {
+      background: var(--dark);
+      color: #fff;
+      padding: 11px 17px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    main {
+      padding: 70px 0 90px;
+    }
+
+    .article {
+      max-width: 820px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Space Grotesk", sans-serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      letter-spacing: -.045em;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin: 52px 0 18px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin: 28px 0 12px;
+    }
+
+    p {
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin-bottom: 35px;
+    }
+
+    ol,
+    ul {
+      margin: 15px 0 22px 25px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .formula {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 22px;
+      margin: 24px 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      overflow-x: auto;
+    }
+
+    .example {
+      background: var(--dark);
+      color: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 35px 0;
+    }
+
+    .example h2 {
+      color: #fff;
+      margin: 0 0 18px;
+      font-size: 1.55rem;
+    }
+
+    .example p {
+      color: #e2e2e2;
+    }
+
+    .example .formula {
+      background: rgba(255,255,255,.08);
+      border: 0;
+      color: #fff;
+    }
+
+    .note {
+      background: #eeeeea;
+      border-left: 4px solid var(--dark);
+      padding: 18px 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+
+    .cta {
+      margin-top: 55px;
+      background: var(--accent);
+      border-radius: 20px;
+      padding: 35px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 12px;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: 0 auto 22px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--dark);
+      color: #fff;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 22px 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 9px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #fff;
+      padding: 35px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-content p {
+      margin: 0;
+      color: #bdbdbd;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 760px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .nav-btn {
+        padding: 10px 13px;
+        font-size: .85rem;
+      }
+
+      main {
+        padding: 50px 0 70px;
+      }
+
+      .example {
+        padding: 22px;
+      }
+
+      .cta {
+        padding: 27px 20px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Calculate Concrete for a Slab",
+    "description": "A simple guide explaining how to calculate concrete volume for a slab.",
+    "author": {
+      "@type": "Organization",
+      "name": "SlabCalc"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SlabCalc"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate concrete for a slab?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the slab length by its width and thickness. Make sure all three measurements use the same unit before calculating."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula for calculating concrete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The basic formula is Length × Width × Thickness = Concrete Volume."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I order extra concrete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A project may require a small additional amount because actual site conditions can vary from the calculated dimensions."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+
+      <a href="index.html" class="logo" aria-label="SlabCalc home">
+        <span class="logo-mark">CS</span>
+        <span>SlabCalc</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html#calculator">Calculator</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#examples">Examples</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+
+      <a href="index.html#calculator" class="nav-btn">Calculate Now</a>
+
+    </div>
+  </header>
+
+  <main>
+    <article class="article">
+
+      <span class="eyebrow">Concrete Guide</span>
+
+      <h1>How to Calculate Concrete for a Slab</h1>
+
+      <p class="intro">
+        Calculating the amount of concrete needed for a slab is simple when you
+        know the slab's length, width, and thickness. This guide explains the
+        formula and shows an easy example.
+      </p>
+
+      <h2>Concrete Slab Calculation Formula</h2>
+
+      <p>
+        The basic formula for calculating concrete volume is:
+      </p>
+
+      <div class="formula">
+        Length × Width × Thickness = Concrete Volume
+      </div>
+
+      <p>
+        The important thing is to use the same measurement unit for every
+        dimension. If your slab thickness is given in inches while length and
+        width are in feet, convert the thickness to feet first.
+      </p>
+
+      <h2>Step-by-Step Calculation</h2>
+
+      <ol>
+        <li>Measure the slab length.</li>
+        <li>Measure the slab width.</li>
+        <li>Measure the required slab thickness.</li>
+        <li>Convert the measurements to compatible units.</li>
+        <li>Multiply length × width × thickness.</li>
+        <li>Convert the result to cubic yards or cubic meters if needed.</li>
+      </ol>
+
+      <div class="example">
+
+        <h2>Example: 10x10 Foot Slab</h2>
+
+        <p>
+          Let's calculate the concrete needed for a slab that is 10 feet long,
+          10 feet wide, and 4 inches thick.
+        </p>
+
+        <p>
+          First, convert 4 inches to feet:
+        </p>
+
+        <div class="formula">
+          4 ÷ 12 = 0.333 feet
+        </div>
+
+        <p>
+          Now calculate the volume:
+        </p>
+
+        <div class="formula">
+          10 × 10 × 0.333 = 33.33 cubic feet
+        </div>
+
+        <p>
+          Convert cubic feet to cubic yards:
+        </p>
+
+        <div class="formula">
+          33.33 ÷ 27 = 1.23 cubic yards
+        </div>
+
+        <p>
+          So the theoretical concrete volume is approximately
+          <strong>33.33 cubic feet</strong>, or
+          <strong>1.23 cubic yards</strong>.
+        </p>
+
+      </div>
+
+      <h2>How to Convert Concrete to Cubic Yards</h2>
+
+      <p>
+        If you calculate the volume in cubic feet, divide the result by 27 to
+        convert it to cubic yards.
+      </p>
+
+      <div class="formula">
+        Cubic Feet ÷ 27 = Cubic Yards
+      </div>
+
+      <p>
+        For example, if your slab requires 54 cubic feet:
+      </p>
+
+      <div class="formula">
+        54 ÷ 27 = 2 cubic yards
+      </div>
+
+      <h2>How to Convert Concrete to Cubic Meters</h2>
+
+      <p>
+        To convert cubic feet to cubic meters, multiply the cubic-foot volume
+        by approximately 0.0283168.
+      </p>
+
+      <div class="formula">
+        Cubic Feet × 0.0283168 = Cubic Meters
+      </div>
+
+      <p>
+        For example:
+      </p>
+
+      <div class="formula">
+        33.33 × 0.0283168 ≈ 0.94 cubic meters
+      </div>
+
+      <h2>Why Slab Thickness Matters</h2>
+
+      <p>
+        Thickness directly affects the amount of concrete required. A slab that
+        is 6 inches thick will require more concrete than the same slab at
+        4 inches thick.
+      </p>
+
+      <p>
+        Before calculating your concrete quantity, make sure you know the
+        planned thickness for your project.
+      </p>
+
+      <div class="note">
+        <strong>Tip:</strong> Double-check your measurements before ordering
+        concrete. Actual construction conditions can vary, so project planning
+        may require an additional allowance.
+      </div>
+
+      <h2>Calculate Concrete for Your Slab</h2>
+
+      <p>
+        You don't have to calculate everything manually. Our free Concrete Slab
+        Calculator lets you enter your slab dimensions and quickly estimate the
+        required concrete volume.
+      </p>
+
+      <div class="cta">
+
+        <h2>Free Concrete Slab Calculator</h2>
+
+        <p>
+          Enter your length, width, and thickness to calculate the concrete
+          needed for your slab.
+        </p>
+
+        <a href="index.html#calculator" class="cta-button">
+          Open Concrete Calculator
+        </a>
+
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>How do I calculate concrete for a slab?</h3>
+        <p>
+          Multiply the slab length by its width and thickness. Make sure the
+          measurements use compatible units before calculating.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the formula for calculating concrete?</h3>
+        <p>
+          The basic formula is Length × Width × Thickness = Concrete Volume.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How much concrete does a 10x10 slab need?</h3>
+        <p>
+          A 10x10 foot slab that is 4 inches thick requires approximately
+          33.33 cubic feet, or 1.23 cubic yards, before any additional allowance.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I calculate concrete for different slab sizes?</h3>
+        <p>
+          Yes. Use our
+          <a href="index.html#calculator">
+            <strong>Concrete Slab Calculator</strong>
+          </a>
+          to calculate concrete for your own slab dimensions.
+        </p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+
+      <p>
+        © 2026 SlabCalc. Free Concrete Slab Calculator.
+      </p>
+
+      <a href="index.html">
+        Back to Calculator
+      </a>
+
+    </div>
+  </footer>
+
+</body>
+</html>
