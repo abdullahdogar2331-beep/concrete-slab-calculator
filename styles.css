@@ -1374,3 +1374,12 @@ details[open] summary span {
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
 }
+.logo > span:last-child {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.32rem;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
