@@ -1393,3 +1393,8 @@ details[open] summary span {
 .desktop-nav a:hover {
   color: #111;
 }
+
+
+/* Concrete slab logo asset */
+.logo-image{width:38px;height:38px;display:block;flex-shrink:0;border-radius:11px;}
+@media (max-width:768px){.logo-image{width:35px;height:35px;border-radius:10px;}}
