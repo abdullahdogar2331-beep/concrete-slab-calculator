@@ -1,0 +1,17 @@
+{
+  "name": "Concrete Slab Calculator",
+  "short_name": "SlabCalc",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f2",
+  "theme_color": "#181a19",
+  "description": "Free concrete slab calculator for cubic feet, cubic yards, bags, waste allowance, and material cost.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
