@@ -1459,3 +1459,34 @@ details[open] summary span {
 @media (prefers-reduced-motion: reduce) {
   .steps-grid .step-card::before { transition: none; }
 }
+
+
+/* Finish the lower page with a subtle, intentional SlabCalc canvas */
+body {
+  background-color: #f4f5f0;
+  background-image:
+    radial-gradient(ellipse at 8% 18%, rgba(199,255,53,.09), transparent 32%),
+    radial-gradient(ellipse at 94% 62%, rgba(39,57,44,.055), transparent 28%);
+  background-attachment: fixed;
+}
+.info-section,
+.example-section,
+.projects-section,
+.faq-section {
+  position: relative;
+  isolation: isolate;
+}
+.info-section::before,
+.example-section::before,
+.projects-section::before,
+.faq-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,.42), rgba(237,240,231,.62));
+}
+.formula-card {
+  box-shadow: 0 24px 60px rgba(18, 25, 17, .12);
+}
