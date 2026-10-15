@@ -670,3 +670,11 @@
 @media(max-width:900px){#concrete-slab-guide .slab-showreel{position:relative;top:auto;right:auto;width:min(100% - 36px,565px);height:440px;margin:0 auto 30px}#concrete-slab-guide .container{position:relative} .showreel-copy{top:85px}.showreel-calculator,.showreel-result{top:90px}}
 @media(max-width:520px){#concrete-slab-guide .slab-showreel{height:400px;border-radius:18px}.showreel-topline{left:16px;right:16px;top:16px}.showreel-copy{left:20px;top:88px}.showreel-copy h3{font-size:28px}.showreel-blueprint{inset:140px 10px 55px}.showreel-calculator,.showreel-result{width:84%;top:86px;padding:15px}.showreel-result>strong{font-size:45px}.showreel-bottom{left:16px;right:16px;font-size:8px}}
 @media(prefers-reduced-motion:reduce){.showreel-copy,.showreel-blueprint,.showreel-calculator,.showreel-result,.showreel-progress i,.result-line span,.showreel-orbit,.blueprint-slab{animation:none!important}.showreel-copy{opacity:1}.showreel-blueprint,.showreel-calculator,.showreel-result{display:none}}
+
+
+/* Nudge the desktop showreel a little to the left */
+@media (min-width: 901px) {
+  #concrete-slab-guide .slab-showreel {
+    right: calc(max((100vw - 1160px)/2, 28px) + 24px);
+  }
+}
