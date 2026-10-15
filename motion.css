@@ -686,3 +686,9 @@
     right: max(calc((100vw - 1160px)/2), 28px);
   }
 }
+
+
+/* Push showreel further right as requested */
+@media (min-width: 901px) {
+  #concrete-slab-guide .slab-showreel { transform: translateX(32px); }
+}
