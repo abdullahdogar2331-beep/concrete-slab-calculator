@@ -542,3 +542,53 @@
 @media (prefers-reduced-motion: reduce) {
   #faq .faq-list details[open] { animation: none; }
 }
+
+
+/* Construction footage background for the concrete calculator guide */
+.concrete-guide-video {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #111 !important;
+}
+.concrete-guide-video .guide-background-video,
+.concrete-guide-video .guide-video-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.concrete-guide-video .guide-background-video {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center;
+  opacity: .48;
+}
+.concrete-guide-video .guide-video-overlay {
+  z-index: -1;
+  background: linear-gradient(110deg, rgba(10, 12, 10, .94), rgba(10, 12, 10, .72) 55%, rgba(10, 12, 10, .84));
+}
+.concrete-guide-video > .container {
+  position: relative;
+  z-index: 1;
+}
+.concrete-guide-video .section-heading h2,
+.concrete-guide-video .section-heading p {
+  color: #f7f8f4;
+}
+.concrete-guide-video .section-heading p {
+  color: rgba(247, 248, 244, .78);
+}
+.concrete-guide-video .section-tag {
+  color: #d5f43a;
+}
+@media (max-width: 700px) {
+  .concrete-guide-video .guide-background-video { opacity: .34; }
+  .concrete-guide-video .guide-video-overlay {
+    background: rgba(10, 12, 10, .82);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .concrete-guide-video .guide-background-video { display: none; }
+}
