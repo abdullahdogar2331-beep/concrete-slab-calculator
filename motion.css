@@ -202,3 +202,168 @@
     transform: none;
   }
 }
+
+
+/* Editorial guide cards: make every numbered guide point feel intentional */
+#concrete-slab-guide > .container > .section-heading:not(:first-child) {
+  position: relative;
+  isolation: isolate;
+  margin-top: 24px !important;
+  padding: clamp(22px, 3.5vw, 34px);
+  overflow: hidden;
+  border: 1px solid #e0e3d8;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(213,244,58,.10), transparent 34%),
+    #fff;
+  box-shadow: 0 10px 28px rgba(24,26,25,.035);
+  transition: transform .3s var(--motion-ease), box-shadow .3s ease, border-color .3s ease;
+}
+
+#concrete-slab-guide > .container > .section-heading:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, #d5f43a, #9ebc12);
+  transform: scaleY(.35);
+  transform-origin: top;
+  transition: transform .35s var(--motion-ease);
+}
+
+#concrete-slab-guide > .container > .section-heading:not(:first-child):hover {
+  transform: translateY(-3px);
+  border-color: rgba(158,188,18,.5);
+  box-shadow: 0 18px 42px rgba(24,26,25,.075);
+}
+
+#concrete-slab-guide > .container > .section-heading:not(:first-child):hover::before {
+  transform: scaleY(1);
+}
+
+#concrete-slab-guide .section-heading h2 {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  font-size: clamp(26px, 3.5vw, 38px);
+  letter-spacing: -.045em;
+}
+
+#concrete-slab-guide .section-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52px;
+  height: 3px;
+  border-radius: 99px;
+  background: var(--accent-dark);
+  transition: width .3s var(--motion-ease);
+}
+
+#concrete-slab-guide .section-heading:hover h2::after {
+  width: 86px;
+}
+
+#concrete-slab-guide .section-heading h3 {
+  margin-top: 20px;
+  color: #59621f;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(18px, 2.2vw, 23px);
+}
+
+#concrete-slab-guide .section-heading p {
+  max-width: 850px;
+  margin-top: 13px;
+  color: #5f6661;
+  line-height: 1.8;
+}
+
+#concrete-slab-guide .section-heading a {
+  color: #667b08;
+  text-decoration: underline;
+  text-decoration-color: rgba(158,188,18,.5);
+  text-underline-offset: 3px;
+  transition: color .2s ease, text-decoration-color .2s ease;
+}
+
+#concrete-slab-guide .section-heading a:hover {
+  color: #242a12;
+  text-decoration-color: #9ebc12;
+}
+
+#concrete-slab-guide .section-heading ul {
+  display: grid;
+  gap: 11px;
+  margin: 18px 0 8px;
+  padding: 0;
+  list-style: none;
+}
+
+#concrete-slab-guide .section-heading li {
+  position: relative;
+  padding: 12px 15px 12px 42px;
+  border: 1px solid #e9ebdf;
+  border-radius: 12px;
+  background: rgba(245,245,242,.72);
+  color: #555d57;
+  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+}
+
+#concrete-slab-guide .section-heading li::before {
+  content: "✓";
+  position: absolute;
+  left: 14px;
+  top: 11px;
+  display: grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #22251b;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+#concrete-slab-guide .section-heading li:hover {
+  transform: translateX(3px);
+  border-color: rgba(158,188,18,.42);
+  background: #fbfcec;
+}
+
+/* The waste/overage point gets a little extra emphasis without shouting */
+#concrete-slab-guide > .container > .section-heading:has(h2) {
+  scroll-margin-top: 100px;
+}
+
+#concrete-slab-guide .formula-card {
+  border: 1px solid rgba(213,244,58,.18);
+  box-shadow: 0 18px 42px rgba(18,20,19,.12);
+}
+
+#concrete-slab-guide .formula-box {
+  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+}
+
+#concrete-slab-guide .formula-box:hover {
+  transform: translateX(3px);
+  border-color: rgba(213,244,58,.4);
+  background: #292d29;
+}
+
+@media (max-width: 700px) {
+  #concrete-slab-guide > .container > .section-heading:not(:first-child) {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+  #concrete-slab-guide .section-heading h2 {
+    font-size: clamp(25px, 7vw, 32px);
+    line-height: 1.12;
+  }
+  #concrete-slab-guide .section-heading li:hover {
+    transform: none;
+  }
+}
