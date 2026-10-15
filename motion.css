@@ -678,3 +678,11 @@
     right: calc(max((100vw - 1160px)/2, 28px) + 24px);
   }
 }
+
+
+/* Correct showreel placement: shift it slightly to the right on desktop */
+@media (min-width: 901px) {
+  #concrete-slab-guide .slab-showreel {
+    right: max(calc((100vw - 1160px)/2), 28px);
+  }
+}
