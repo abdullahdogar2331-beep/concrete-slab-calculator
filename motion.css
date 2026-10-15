@@ -592,3 +592,32 @@
 @media (prefers-reduced-motion: reduce) {
   .concrete-guide-video .guide-background-video { display: none; }
 }
+
+
+/* Premium colour treatment for the three concrete project cards */
+.steps-grid .step-card:nth-child(1) {
+  background: linear-gradient(145deg, #edf3ff 0%, #dce7f8 100%);
+  border-color: #c9d8f0;
+}
+.steps-grid .step-card:nth-child(2) {
+  background: linear-gradient(145deg, #eaf5ed 0%, #d5eadb 100%);
+  border-color: #c2dfcb;
+}
+.steps-grid .step-card:nth-child(3) {
+  background: linear-gradient(145deg, #fff2df 0%, #f7e2c4 100%);
+  border-color: #ecd3ae;
+}
+.steps-grid .step-card:nth-child(1) .step-number { color: #42618f; }
+.steps-grid .step-card:nth-child(2) .step-number { color: #39734e; }
+.steps-grid .step-card:nth-child(3) .step-number { color: #94612a; }
+.steps-grid .step-card {
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.steps-grid .step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(20, 30, 20, .10);
+}
+@media (prefers-reduced-motion: reduce) {
+  .steps-grid .step-card { transition: none; }
+  .steps-grid .step-card:hover { transform: none; }
+}
